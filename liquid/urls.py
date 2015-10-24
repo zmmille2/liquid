@@ -19,28 +19,14 @@ urlpatterns = patterns('',
     url(r'^logout/$', 'django.contrib.auth.views.logout'),
     url(r'^intranet/', include('intranet.urls')),
     #url(r'^conference/', include('conference.urls')),
-    url(r'^kiosk/$', 'kiosk.views.main'),
 
-    url(r'^vpnrequired/$', 'views.vpnRequired'),    
+    url(r'^vpnrequired/$', 'views.vpnRequired'),
     url(r'^resume/$', redirect_to, {'url': '/corporate/resume/'}),
-    url(r'^print/$', redirect_to, {'url': 
+    url(r'^print/$', redirect_to, {'url':
         'https://www-s.acm.uiuc.edu/confluence/display/admin/Printing'}),
-    url(r'^3dprint/$', redirect_to, {'url': 
+    url(r'^3dprint/$', redirect_to, {'url':
         'https://illinois.edu/fb/sec/1826253'}),
-
-    #rp redirects
-    url(r'^mm/$',redirect_to, {'url': 'http://www.acm.uiuc.edu/conference/2014/mechmania/'}),
-    url(r'^attend/$',redirect_to, {'url': 'http://www.acm.uiuc.edu/conference/2014/register/'}),
-    url(r'^register/$',redirect_to, {'url': 'http://www.acm.uiuc.edu/conference/2014/register/'}),
-    url(r'^helpout/$',redirect_to, {'url': 'http://www.acm.uiuc.edu/conference/2014/volunteer/'}),
-    url(r'^volunteer/$',redirect_to, {'url': 'http://www.acm.uiuc.edu/conference/2014/volunteer/'}),
-    url(r'^schedule/$',redirect_to, {'url': 'http://www.acm.uiuc.edu/conference/2014/schedule/'}),
-    url(r'^jobs/$',redirect_to, {'url': 'http://www.acm.uiuc.edu/conference/2014/careerfairs/'}),
-    url(r'^jobfair/$',redirect_to, {'url': 'http://www.acm.uiuc.edu/conference/2014/careerfairs/'}),
-    url(r'^startup/$',redirect_to, {'url': 'http://www.acm.uiuc.edu/conference/2014/careerfairs/'}),
-    url(r'^startupfair/$',redirect_to, {'url': 'http://www.acm.uiuc.edu/conference/2014/careerfairs/'}),
-    url(r'^mm-irc/$',redirect_to, {'url': 'http://webchat.freenode.net/?channels=%23%23mm20&uio=OT10cnVlde'}),
-
+ 
     #sigmusic redirects
     url(r'^chroma/$',redirect_to, {'url': '/sigmusic/chroma'}),
     url(r'^cosmos/$',redirect_to, {'url': '/sigmusic/cosmos'}),

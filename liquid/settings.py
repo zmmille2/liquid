@@ -153,8 +153,6 @@ INSTALLED_APPS = (
     'intranet.caffeine_manager.soda',
     'intranet.caffeine_manager.trays',
     'intranet.caffeine_manager.user',
-    
-    'kiosk',
 
     'bootstrapform',
     'utils.django_mailman',
@@ -243,6 +241,7 @@ try:
 except ImportError, exp:
   pass
 
+DATABASE_ROUTERS = ["db_routers.ModelDatabaseRouter"]
 
 if SERVE_STATIC:
   INSTALLED_APPS += ('django.contrib.staticfiles',)
